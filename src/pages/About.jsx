@@ -1,7 +1,34 @@
 import React from "react";
 import myImage from "../assets/my_photo.png";
-import { FaDownload } from "react-icons/fa";
+import {
+	FaDownload,
+	FaEnvelope,
+	FaGithub,
+	FaLinkedin,
+	FaMapMarkerAlt,
+	FaMedium,
+} from "react-icons/fa";
 import resumePDF from "../assets/my_resume.pdf";
+
+const email = "shilpa.laksahani@gmail.com";
+
+const socialLinks = [
+	{
+		label: "LinkedIn",
+		url: "https://www.linkedin.com/in/shilpa-perera-866522201/",
+		icon: FaLinkedin,
+	},
+	{
+		label: "GitHub",
+		url: "https://github.com/Shilpa-Perera",
+		icon: FaGithub,
+	},
+	{
+		label: "Medium",
+		url: "https://medium.com/@laksahaniperera",
+		icon: FaMedium,
+	},
+];
 
 const About = () => {
 	return (
@@ -23,7 +50,7 @@ const About = () => {
 				<p className="text-xl md:text-2xl lg:text-3xl text-center text-white">
 					Welcome to my portfolio
 				</p>
-				<div className="text-center mt-8">
+				<div className="mt-8 flex flex-wrap justify-center gap-4">
 					<a
 						href={resumePDF}
 						download="Shilpa_Perera_Resume.pdf"
@@ -31,7 +58,32 @@ const About = () => {
 					>
 						<FaDownload className="mr-2" /> Download Resume
 					</a>
+					<a
+						href={`mailto:${email}`}
+						className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-white hover:bg-blue-500 font-bold rounded-full transition duration-300"
+					>
+						<FaEnvelope className="mr-2" aria-hidden="true" /> Email Me
+					</a>
 				</div>
+				<ul className="mt-8 flex justify-center gap-6 text-white">
+					{socialLinks.map(({ label, url, icon: Icon }) => (
+						<li key={label}>
+							<a
+								href={url}
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label={`${label} (opens in a new tab)`}
+								title={label}
+								className="block hover:text-blue-400 transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+							>
+								<Icon size={32} aria-hidden="true" />
+							</a>
+						</li>
+					))}
+				</ul>
+				<p className="mt-4 flex items-center justify-center gap-2 text-gray-300">
+					<FaMapMarkerAlt aria-hidden="true" /> Colombo, Sri Lanka
+				</p>
 			</div>
 		</div>
 	);
