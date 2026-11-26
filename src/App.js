@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Intro from "./pages/Intro";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
+import Exploring from "./pages/Exploring";
 import Writing from "./pages/Writing";
 import Education from "./pages/Education";
 import Testimonials from "./pages/Testimonials";
@@ -57,6 +58,7 @@ function App() {
 				<Intro />
 				<Experience />
 				<Projects />
+				<Exploring />
 				<Writing />
 				<Education />
 				<Testimonials />

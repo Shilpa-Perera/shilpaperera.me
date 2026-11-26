@@ -35,6 +35,8 @@ const Intro = () => {
 						Next.js, Flutter and Go for secure communication solutions.
 						Adaptable and solution-oriented, with a strong drive to take
 						on complex challenges and deliver high-quality software.
+						Currently expanding into cybersecurity, cloud, DevOps and
+						networking.
 					</p>
 					<div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
 						<a
