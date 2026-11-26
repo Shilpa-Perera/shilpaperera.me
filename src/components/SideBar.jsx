@@ -1,13 +1,21 @@
 import React, { useState } from "react";
-import { FaUser, FaGraduationCap, FaCode } from "react-icons/fa";
+import {
+	FaUser,
+	FaBriefcase,
+	FaCode,
+	FaPenNib,
+	FaGraduationCap,
+} from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
 import { Tooltip } from "react-tooltip";
 
 // Each entry is a section on the page, in scroll order.
 export const sections = [
 	{ id: "welcome", label: "Welcome", icon: FaUser },
-	{ id: "journey", label: "My Journey", icon: FaGraduationCap },
+	{ id: "experience", label: "Experience", icon: FaBriefcase },
 	{ id: "projects", label: "Projects", icon: FaCode },
+	{ id: "writing", label: "Writing", icon: FaPenNib },
+	{ id: "education", label: "Education", icon: FaGraduationCap },
 	{ id: "testimonials", label: "Testimonials", icon: BsStars },
 ];
 
@@ -18,7 +26,7 @@ const Sidebar = ({ activeId }) => {
 		<div className="bg-gray-950 text-white w-full sm:w-32 h-20 sm:h-full flex flex-row sm:flex-col justify-center items-center p-1 fixed sm:fixed top-0 left-0 sm:top-0 sm:left-0 sm:z-0 z-10">
 			<nav
 				aria-label="Sections"
-				className="flex flex-row sm:flex-col justify-center w-full sm:space-y-8 space-x-4 sm:space-x-0 items-center"
+				className="flex flex-row sm:flex-col justify-center w-full sm:space-y-6 space-x-3 sm:space-x-0 items-center"
 			>
 				{sections.map(({ id, label, icon: Icon }) => {
 					const active = activeId === id;
@@ -33,7 +41,7 @@ const Sidebar = ({ activeId }) => {
 							}`}
 						>
 							<div
-								className={`rounded-full border-2 border-purple-500 p-2 sm:p-4 transition-colors duration-300 ${
+								className={`rounded-full border-2 border-purple-500 p-2 sm:p-3 transition-colors duration-300 ${
 									active ? "bg-purple-500" : "bg-transparent"
 								}`}
 								data-tooltip-id="my-tooltip"
@@ -42,7 +50,7 @@ const Sidebar = ({ activeId }) => {
 								onMouseEnter={() => setIsOpen(true)}
 								onClick={() => setIsOpen(false)}
 							>
-								<Icon className="text-xl sm:text-3xl" aria-hidden="true" />
+								<Icon className="text-lg sm:text-2xl" aria-hidden="true" />
 							</div>
 						</a>
 					);

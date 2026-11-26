@@ -1,6 +1,5 @@
-import { LiaSchoolSolid } from "react-icons/lia";
 import { IoSchool } from "react-icons/io5";
-import { FaLaptopCode, FaPenAlt } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
 
 // Newest first. To add an entry, add an object to the right list.
@@ -55,21 +54,5 @@ export const education = [
 			"GPA - 3.81, Dean's list - semester 1, semester 4, semester 5, semester 6",
 		],
 		icon: IoSchool,
-	},
-	{
-		id: "al",
-		title: "GCE Advanced Level Exam",
-		institution: "Gothami Balika Vidyalaya, Colombo 10",
-		year: "2015-2018",
-		points: ["Passed with 2A passes and a B pass"],
-		icon: LiaSchoolSolid,
-	},
-	{
-		id: "ol",
-		title: "GCE Ordinary Level Exam",
-		institution: "Gothami Balika Vidyalaya, Colombo 10",
-		year: "2014",
-		points: ["Passed with 9A passes"],
-		icon: FaPenAlt,
 	},
 ];

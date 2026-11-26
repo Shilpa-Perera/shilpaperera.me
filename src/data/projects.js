@@ -11,7 +11,8 @@ import project9 from "../assets/project_9.png";
 import blog1 from "../assets/blog_1.png";
 import blog2 from "../assets/blog_2.png";
 
-// Shown in this order. `tech` and `githubUrl` are optional; leave out
+// Shown in this order. `featured: true` projects are always shown; the rest sit
+// behind "Show all projects". `tech` and `githubUrl` are optional; leave out
 // `githubUrl` to hide the GitHub link.
 export const projects = [
 	{
@@ -24,6 +25,7 @@ export const projects = [
 	},
 	{
 		id: "blockchain-visualiser",
+		featured: true,
 		title: "Cloud-Native Realtime Multi Blockchain Visualiser",
 		description:
 			"A blockchain visualization framework that can visualize real-time statistics of a blockchain network using cloud-native technologies.",
@@ -40,6 +42,7 @@ export const projects = [
 	},
 	{
 		id: "letsgo",
+		featured: true,
 		title: "Let'sGo : Indoor positioning using wifi fingerprinting",
 		description:
 			"Let'sGo indoor navigation app utilises Wi-Fi fingerprinting alongside GPS to track indoor positions effectively.",
@@ -48,6 +51,7 @@ export const projects = [
 	},
 	{
 		id: "booking-service",
+		featured: true,
 		title: "Resource Booking Service - Backend Contribution",
 		description:
 			"University resource booking system using MOSIP (Modular Opensource Identity Platform) with bio-metric verification.",
@@ -63,6 +67,7 @@ export const projects = [
 	},
 	{
 		id: "texas-estore",
+		featured: true,
 		title: "Texas E-store : E-Commerce platform",
 		description:
 			"A web application that enables the commercial process of buying and selling over the internet. The application has main features for customers to find specific products, cart feature for order management, inventory management and report generation",

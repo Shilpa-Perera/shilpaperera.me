@@ -1,10 +1,10 @@
 import React from "react";
 import { FaLinkedin, FaQuoteLeft } from "react-icons/fa";
+import Section from "../components/Section";
 import { testimonials } from "../data/testimonials";
 
-// Same card look as the My Journey and Projects pages.
 const TestimonialCard = ({ item }) => (
-	<figure className="bg-white rounded-lg shadow p-6 sm:p-10 font-serif text-gray-700 transition-shadow duration-300 hover:shadow-xl">
+	<figure className="bg-white rounded-lg shadow p-6 sm:p-10 font-serif text-gray-700">
 		<FaQuoteLeft className="text-blue-300 text-3xl sm:text-4xl mb-4" aria-hidden="true" />
 		<blockquote className="space-y-4 text-base sm:text-lg leading-relaxed">
 			{item.quote.map((paragraph) => (
@@ -34,19 +34,14 @@ const TestimonialCard = ({ item }) => (
 	</figure>
 );
 
-const Testimonial = () => {
-	return (
-		<div className="min-h-screen bg-gradient-to-r from-gray-950 to-blue-900 py-6 sm:py-12 flex flex-col justify-center">
-			<h1 className="animate-slideInUp text-center text-white text-4xl sm:text-7xl font-bold font-serif mb-12 px-4">
-				What They Say
-			</h1>
-			<div className="px-4 sm:pl-28 sm:pr-12 lg:px-32 w-full max-w-5xl mx-auto animate-slideInUp space-y-8">
-				{testimonials.map((item) => (
-					<TestimonialCard key={item.id} item={item} />
-				))}
-			</div>
+const Testimonials = () => (
+	<Section id="testimonials" title="What people say">
+		<div className="space-y-8">
+			{testimonials.map((item) => (
+				<TestimonialCard key={item.id} item={item} />
+			))}
 		</div>
-	);
-};
+	</Section>
+);
 
-export default Testimonial;
+export default Testimonials;
